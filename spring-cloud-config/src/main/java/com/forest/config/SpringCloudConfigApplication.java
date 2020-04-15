@@ -1,4 +1,4 @@
-package com.forest.springcloudconfig;
+package com.forest.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
