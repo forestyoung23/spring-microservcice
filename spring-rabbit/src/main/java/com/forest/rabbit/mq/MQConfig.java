@@ -1,5 +1,8 @@
 package com.forest.rabbit.mq;
 
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.TopicExchange;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,8 +13,19 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class MQConfig {
+
     @Bean
-    public TopicExchange topicExchange() {
-        return new TopicExchange("KISSMYASS");
+    public Queue queue() {
+        return new Queue("test");
+    }
+
+    @Bean
+    public TopicExchange testExchange() {
+        return new TopicExchange("KISS_MY_ASS");
+    }
+
+    @Bean
+    public Binding bind() {
+        return BindingBuilder.bind(queue()).to(testExchange()).with("asd");
     }
 }
