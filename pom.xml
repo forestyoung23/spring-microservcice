@@ -10,8 +10,14 @@
 
   <name>spring-microservcice</name>
 
+  <modules>
+    <module>spring-boot-kafka</module>
+    <module>spring-cloud-config</module>
+    <module>spring-cloud-discovery</module>
+    <module>spring-rabbit</module>
+  </modules>
+
   <properties>
-    <java.version>1.8</java.version>
     <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
     <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
   </properties>
@@ -27,14 +33,23 @@
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter</artifactId>
+        <artifactId>spring-boot-dependencies</artifactId>
         <version>${spring-boot.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <build>
+    <pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <version>${spring-boot.version}</version>
+      </plugin>
+    </plugins>
+    </pluginManagement>
+  </build>
 </project>
