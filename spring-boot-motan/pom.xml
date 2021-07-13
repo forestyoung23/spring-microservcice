@@ -8,17 +8,15 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.forest</groupId>
-    <artifactId>spring-boot-nacos</artifactId>
+    <artifactId>spring-boot-motan</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-nacos</name>
+    <name>spring-boot-motan</name>
 
     <modules>
-        <module>nacos-config</module>
-        <module>nacos-discovery</module>
+        <module>motan-api</module>
+        <module>motan-client</module>
+        <module>motan-server</module>
     </modules>
-    <properties>
-        <java.version>11</java.version>
-    </properties>
 
     <build>
         <plugins>

@@ -12,7 +12,7 @@
     <artifactId>eureka-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>eureka-consumer</name>
-<!--    <packaging>jar</packaging>-->
+    <!--    <packaging>jar</packaging>-->
 
     <dependencies>
         <dependency>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:motan="http://api.weibo.com/schema/motan"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+   http://api.weibo.com/schema/motan http://api.weibo.com/schema/motan.xsd">
+    <!--服务实现类，真正处理业务的地方-->
+    <bean id="fooServiceImpl" class="com.forest.motan.server.FooServiceImpl"/>
+    <!--暴露motan服务，direct模式-->
+    <!--<motan:service interface="com.forest.service.FooService" ref="fooServiceImpl" export="8002"/>-->
+    <!--暴露motan服务，集群模式-->
+    <motan:service interface="com.forest.service.FooService" ref="fooServiceImpl" export="8002" registry="test"/>
+    <motan:registry regProtocol="zookeeper" name="test" address="localhost:2181"/>
+</beans>
