@@ -3,7 +3,7 @@ package com.forest.rabbit.mq;
 import org.springframework.stereotype.Component;
 
 /**
- * @author dongyang
+ * @author Forest
  * @date 2020年09月22日 17:07
  */
 @Component

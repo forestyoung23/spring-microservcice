@@ -3,7 +3,7 @@ package com.forest.rabbit.mq;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author dongyang
+ * @author Forest
  * @date 2020年09月22日 16:24
  */
 @Configuration

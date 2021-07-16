@@ -6,7 +6,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 import java.util.Properties;
 
 /**
- * @author dongyang
+ * @author Forest
  * @date 2021年07月13日 15:52
  */
 public class TestProducer {

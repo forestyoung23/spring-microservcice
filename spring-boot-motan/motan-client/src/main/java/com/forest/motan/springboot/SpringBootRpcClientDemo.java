@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 /**
  * 使用注解方式的配置
  *
- * @author dongyang
+ * @author Forest
  * @date 2021年07月06日 18:08
  */
 @SpringBootApplication
