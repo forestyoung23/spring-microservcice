@@ -39,6 +39,7 @@ public class TestProducer {
             ProducerRecord record = new ProducerRecord<>("Test", Integer.toString(i), Integer.toString(i));
             // 发送消息到指定Topic
             producer.send(record);
+            System.err.println("发送消息成功：" + record.topic());
         }
         producer.close();
     }

@@ -28,9 +28,9 @@ public class TestConsumer {
         // 消费者偏移的频率以毫秒为单位自动提交给Kafka，如果enable.auto.commit设置为true。
         props.setProperty("auto.commit.interval.ms", "1000");
         // 表示使用StringSerializer对key进行反序列化
-        props.put("key.deserializer", "org.apache.kafka.common.serialization.StringSerializer");
+        props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         // 表示使用StringSerializer对value进行反序列化
-        props.put("value.deserializer", "org.apache.kafka.common.serialization.StringSerializer");
+        props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         return props;
     }
 
@@ -41,7 +41,7 @@ public class TestConsumer {
             // 设置消费者在返回前等待的时间不超过100ms
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for (ConsumerRecord<String, String> record : records) {
-                System.out.println(record.toString());
+                System.err.println("接收到消息：" + record.toString());
             }
         }
     }
