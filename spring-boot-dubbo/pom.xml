@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.forest</groupId>
-    <artifactId>dubbo</artifactId>
+    <artifactId>spring-boot-dubbo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-dubbo</name>
     <description>Demo project for Spring Boot</description>
@@ -21,6 +21,11 @@
         <module>dubbo-provider</module>
     </modules>
     <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-crypto</artifactId>
+            <version>5.7.15</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>

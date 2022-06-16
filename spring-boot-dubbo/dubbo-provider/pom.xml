@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.forest</groupId>
-        <artifactId>dubbo</artifactId>
+        <artifactId>spring-boot-dubbo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.forest</groupId>
