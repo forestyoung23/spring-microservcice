@@ -1,66 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.forest</groupId>
-  <artifactId>spring-microservcice</artifactId>
-  <version>1.0-SNAPSHOT</version>
+    <groupId>com.forest</groupId>
+    <artifactId>spring-microservcice</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
-  <name>spring-microservcice</name>
+    <name>spring-microservcice</name>
 
-  <modules>
-    <module>spring-boot-dubbo</module>
-    <module>spring-boot-kafka</module>
-    <module>spring-boot-motan</module>
-    <module>spring-boot-nacos</module>
-    <module>spring-cloud-config</module>
-    <module>spring-cloud-discovery</module>
-    <module>spring-rabbit</module>
-  </modules>
+    <modules>
+        <module>spring-boot-dubbo</module>
+        <module>spring-boot-kafka</module>
+        <module>spring-boot-motan</module>
+        <module>spring-boot-nacos</module>
+        <module>spring-cloud-config</module>
+        <module>spring-cloud-discovery</module>
+        <module>spring-rabbit</module>
+    </modules>
 
-  <properties>
-    <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
-    <spring-boot.version>2.5.1</spring-boot.version>
-  </properties>
+    <properties>
+        <spring-cloud.version>2020.0.1</spring-cloud.version>
+        <spring-boot.version>2.4.2</spring-boot.version>
+    </properties>
 
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies</artifactId>
-        <version>${spring-cloud.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-dependencies</artifactId>
-        <version>${spring-boot.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
 
-  <build>
-    <pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>${spring-boot.version}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>11</source>
-          <target>11</target>
-        </configuration>
-      </plugin>
-    </plugins>
-    </pluginManagement>
-  </build>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>11</source>
+                        <target>11</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
