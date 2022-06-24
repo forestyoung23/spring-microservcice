@@ -23,6 +23,7 @@
     <properties>
         <spring-cloud.version>2020.0.1</spring-cloud.version>
         <spring-boot.version>2.4.2</spring-boot.version>
+        <alibaba-cloud.version>2021.1</alibaba-cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -38,6 +39,13 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${alibaba-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

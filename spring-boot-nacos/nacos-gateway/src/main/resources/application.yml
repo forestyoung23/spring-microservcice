@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: nacos-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: nacos-client
+          uri: lb://nacos-client
+          predicates:
+            - Path=/client/**
+        - id: nacos-server
+          uri: lb://nacos-server
+          predicates:
+            - Path=/server/**
