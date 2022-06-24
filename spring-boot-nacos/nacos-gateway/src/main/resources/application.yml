@@ -8,6 +8,9 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
     gateway:
+      discovery:
+        locator:
+          enabled: true # 开启服务发现和路由的功能，网关自动根据注册中心的服务名为每个服务创建一个router，将以服务名开头的请求路径转发到对应的服务
       routes:
         - id: nacos-client
           uri: lb://nacos-client
@@ -17,3 +20,4 @@ spring:
           uri: lb://nacos-server
           predicates:
             - Path=/server/**
+            - After=2017-01-20T17:42:47.789-07:00[America/Denver]
