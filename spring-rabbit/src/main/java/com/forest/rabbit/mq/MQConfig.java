@@ -1,5 +1,7 @@
 package com.forest.rabbit.mq;
 
+import org.springframework.amqp.core.Queue;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -9,18 +11,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MQConfig {
 
-    /*@Bean
-    public Queue queue() {
-        return new Queue("test");
-    }
+    public static final String QUEUENAME = "chatbot";
 
     @Bean
-    public TopicExchange testExchange() {
-        return new TopicExchange("KISS_MY_ASS");
+    public Queue helloQueue() {
+        return new Queue(QUEUENAME);
     }
-
-    @Bean
-    public Binding bind() {
-        return BindingBuilder.bind(queue()).to(testExchange()).with("*");
-    }*/
 }

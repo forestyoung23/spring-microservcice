@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
  * @date 2020年09月23日 14:46
  */
 @Component
+@RabbitListener(queues = "chatbot")
 public class Consumer {
+
     @RabbitHandler
-    // @RabbitListener(bindings = @QueueBinding(value = @Queue("test"), exchange = @Exchange(name = "KISS_MY_ASS", type = ExchangeTypes.TOPIC)))
-    @RabbitListener(queues = "test")
-    public void receive(String msg) {
-        System.err.println(msg);
+    public void process(String s) {
+        System.out.println("Receiver:" + s);
     }
 }

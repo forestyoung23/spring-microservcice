@@ -1,5 +1,6 @@
 package com.forest.dubbo.provider;
 
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
@@ -7,7 +8,8 @@ import org.springframework.context.annotation.ImportResource;
 /**
  * @author Young
  */
-@ImportResource(locations = "classpath:spring/dubbo-provider.xml")
+// @ImportResource(locations = "classpath:spring/dubbo-provider.xml")
+@EnableDubbo
 @SpringBootApplication
 public class DubboProviderApplication {
 

@@ -6,6 +6,7 @@
 
     <groupId>com.forest</groupId>
     <artifactId>spring-microservcice</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <name>spring-microservcice</name>
@@ -18,6 +19,8 @@
         <module>spring-cloud-config</module>
         <module>spring-cloud-discovery</module>
         <module>spring-rabbit</module>
+        <module>spring-boot-alimq</module>
+        <module>docker-demo</module>
     </modules>
 
     <properties>
