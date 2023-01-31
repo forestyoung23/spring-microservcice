@@ -21,6 +21,7 @@
         <module>spring-rabbit</module>
         <module>spring-boot-alimq</module>
         <module>docker-demo</module>
+        <module>spring-webflux</module>
     </modules>
 
     <properties>
