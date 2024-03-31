@@ -20,8 +20,9 @@
         <module>spring-cloud-discovery</module>
         <module>spring-rabbit</module>
         <module>spring-boot-alimq</module>
-        <module>docker-demo</module>
+<!--        <module>docker-demo</module>-->
         <module>spring-webflux</module>
+        <module>spring-boot-actuator</module>
     </modules>
 
     <properties>
