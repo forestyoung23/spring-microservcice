@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-boot-redis
+  data:
+    redis:
+      host: 101.35.195.190
+      port: 6399
+      password: =Xt1PhaG*L#es+4Za:RF
+
+#  data:
+#    redis:
+#      host: 47.119.31.234
+#      port: 6389
+#      password: =Xt1PhaG*L#es+4Za:RF
+logging:
+  level:
+    root: debug
