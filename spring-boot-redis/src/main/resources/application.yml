@@ -14,6 +14,6 @@ spring:
 #      host: 47.119.31.234
 #      port: 6389
 #      password: =Xt1PhaG*L#es+4Za:RF
-logging:
-  level:
-    root: debug
+#logging:
+#  level:
+#    root: debug
