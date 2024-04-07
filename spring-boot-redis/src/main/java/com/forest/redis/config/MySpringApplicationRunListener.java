@@ -1,7 +1,5 @@
 package com.forest.redis.config;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.ConfigurableBootstrapContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringApplicationRunListener;
@@ -16,7 +14,6 @@ import java.time.LocalDateTime;
  * @date 2024年04月03日 17:11
  */
 public class MySpringApplicationRunListener implements SpringApplicationRunListener {
-    private static final Logger log = LoggerFactory.getLogger(MySpringApplicationRunListener.class);
     // 这个构造函数不能少，否则反射生成实例会报错
     public MySpringApplicationRunListener(SpringApplication sa, String[] args) {
     }
