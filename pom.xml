@@ -24,7 +24,7 @@
         <module>spring-boot-actuator</module>
         <module>spring-boot-redis</module>
         <module>spring-cloud-gateway</module>
-        <module>spring-cloud-sleuth</module>
+<!--        <module>spring-cloud-sleuth</module>-->
     </modules>
 
     <properties>
