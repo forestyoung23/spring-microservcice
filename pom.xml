@@ -24,6 +24,7 @@
         <module>spring-boot-actuator</module>
         <module>spring-boot-redis</module>
         <module>spring-cloud-gateway</module>
+        <module>spring-boot-micrometer-tacing</module>
 <!--        <module>spring-cloud-sleuth</module>-->
     </modules>
 
